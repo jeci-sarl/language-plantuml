@@ -47,12 +47,13 @@
 
       {
          "name":"string.quoted.double.plantuml",
-         "begin":"([A-Za-z_0-9]+) +((-?->)|(<-?-)) +([A-Za-z_0-9]+)\\s*(:)",
+         "begin":"([A-Za-z_0-9]+) +([o+-<>]{2,4}) +([A-Za-z_0-9]+)\\s*:(.*)",
          "end":"\\n",
          "beginCaptures": {
             "1": { "name": "constant.string.plantuml" },
             "2": { "name": "keyword.control.plantuml" },
-            "5": { "name": "constant.string.plantuml" }
+            "3": { "name": "constant.string.plantuml" },
+            "4": { "name": "string.unquoted.plantuml" }
           }
       },
 
